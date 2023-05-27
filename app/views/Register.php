@@ -4,12 +4,12 @@
             <div>
               <h1>Đăng ký thành viên</h1>
             </div>
-            <form action="post.php" method="post">
+            <form action="" method="post">
               <div class="input">
                 <label for="name">Họ và tên</label>
                 <input type="text" name="name" id="name" />
               </div>
-              <div class="input">
+              <div class="input"> 
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="ex:example@gmail.com"/>
               </div>
@@ -44,7 +44,7 @@
                 <input type="password" name="repassword" id="repassword" />
               </div>
               <div class="input">
-                <input type="submit" value="Đăng ký" />
+                <input type="submit" value="Đăng ký" name="submit"/>
               </div>
             </form>
           </div>

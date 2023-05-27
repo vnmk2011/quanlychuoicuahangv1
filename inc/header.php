@@ -56,52 +56,34 @@
               <li><a href="/" title="Trang chủ">Trang chủ</a></li>
               <li><a href="/About" title="Giới thiệu">Giới thiệu</a></li>
               <li><a href="/Menu" title="Thực đơn">Thực đơn</a></li>
-
-              <?php
-              if(isset($_SESSION['cart'])) $countCart = count($_SESSION['cart']);
-              if (isset($_SESSION['id_account'])) {
-              
-    echo '<li class="cart">
-    <a href="/views/Cart" title="Giỏ hàng">Giỏ hàng</a>';
-    echo '<span class="count-cart">';
-    if(isset($_SESSION['cart'])) echo $countCart;
-    echo '</span>';
-    echo '</li>';
-    echo '<li><a href="/views/Order" title="Đơn hàng">Đơn hàng</a></li>';}?>
+              <?php if(isset($_SESSION['user'])){ ?>
+              <li class="cart"><a href="/Cart" title="Giỏ hàng">Giỏ hàng</a>
+                <span class="count-cart"> <?php echo count($_SESSION['cart']); ?></span>
+              </li>
+              <li><a href="/Order" title="Đơn hàng">Đơn hàng</a></li>
+              <?php } ?>
               <li><a href="/Branch"  title="Chi nhánh">Chi nhánh</a></li>
               <li><a href="/Blog"  title="Tin tức">Tin tức</a></li>
             </ul>
           </nav>
         </div>
         <div class="auth">
-            <?php
-if (isset($_SESSION['id_account'])) {
-    $infoPerson = $getData->getData('profile', $_SESSION['id_account'])[0];
-    $_SESSION["name"] = $infoPerson['name'];
-    $_SESSION["phone"] = $infoPerson['phone'];
-    $_SESSION["address"] = $infoPerson['address'];
-    if(!isset($_SESSION["cart"]) ) $_SESSION["cart"] = [];
-    $profile = $_SESSION["name"];
-    echo <<<PROFILE
+          <?php if(isset($_SESSION['user'])){?>
             <div class="auth-item profile">
-              <a href="/views/profile.php" title="$profile">$profile</a>
+              <a href="/views/profile.php"><?php echo $_SESSION["user"]["name"];?></a>
             </div>
             <div class="auth-item" >
               <a href="#" title="Click để đăng xuất" id ="logout" onclick="logout()">Đăng xuất</a>
             </div>
-            PROFILE;
-};
-if (!isset($_SESSION['id_account'])) {
-    echo <<<AUTH
+          <?php }else{?>
             <div class="auth-item">
               <a href="/Login" title="Click để đăng nhập thành viên">Đăng nhập</a>
             </div>
             <div class="auth-item">
               <a href="/Register" title="Click để đăng ký">Đăng ký</a>
             </div>
-          AUTH;
-}
-?>
+          <?php }?>
+            
         </div>
       </div>
     </header>

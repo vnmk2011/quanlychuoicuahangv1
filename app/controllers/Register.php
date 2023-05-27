@@ -5,7 +5,22 @@ class Register extends baseController{
         $this->model = $this->loadModel('registerModel');
     }
     public function index(){
-        $this->render('register');
+        if(isset($_SESSION['user'])){
+            echo '<script>alert("Bạn đã đăng nhập"); location.href="/";</script>';
+
+        }else {
+            $this->render('register');
+            if(isset($_POST['submit'])){self::checkRegister();}
+        }
+        
+    }
+    private function checkRegister(){
+       $register = $this->model->post($_POST['username'], $_POST['password'], $_POST['email'], $_POST['address'], $_POST['phone'], $_POST['name'], $_POST['gender']);
+         if($register){
+              echo "<script>alert('Đăng ký thành công')</script>";
+         }else{
+              echo "<script>alert('Đăng ký thất bại trùng tên đăng nhập')</script>";
+         }
     }
 }
- ?>
+ ?> 
