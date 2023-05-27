@@ -57,7 +57,6 @@ class App{
 
         // xử lý params từ phần tử 2 của mảng trở đi
         $this->params = $url ? array_values($url) : [];
-
         if(method_exists($this->controller, $this->action)){
             call_user_func_array([$this->controller,$this->action],$this->params);
         }else{
