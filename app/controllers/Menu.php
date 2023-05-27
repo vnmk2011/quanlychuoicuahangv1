@@ -5,7 +5,7 @@ class Menu extends baseController{
         $this->model = $this->loadModel('menuModel');
     }
     public function index(){
-       $this->render('menu/product');
+       $this->render('menu/products');
     }
     public function details($id = 1){
         $this->render('menu/details');

@@ -19,7 +19,7 @@
       </section>
       <section class="pagination">
         <div class="container-pagination">
-        <?php $products->showPagination();?>
+        
         </div>
       </section>
       
