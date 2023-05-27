@@ -1,7 +1,11 @@
 <?php
-class loginModel {
+class loginModel extends connectDB{
+    private $connect;
+    public function __construct(){
+        $this->connect = $this->connect();
+    }
     public function post(){
-        echo "Login post";
+        var_dump($this->connect);
     }
 }
  ?>
