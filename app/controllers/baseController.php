@@ -25,7 +25,7 @@ class baseController
      * @param array $data dữ liệu truyền vào view
      * @return mixed view nếu tồn tại, ngược lại thông báo lỗi
      */
-    public function render($name, $data = [])
+    public function render($name, ...$data)
     {
         // Kiểm tra file view có tồn tại hay không nếu có thì require vào
         if (file_exists(__DIR__ . '/../views/' . $name . '.php')) {

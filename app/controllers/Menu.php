@@ -1,10 +1,14 @@
 <?php
-class Menu{
+class Menu extends baseController{
+    private $model;
+    public function __construct(){
+        $this->model = $this->loadModel('menuModel');
+    }
     public function index(){
-        echo "Menu - index";
+       $this->render('menu/product');
     }
     public function details($id = 1){
-        echo "Menu - $id";
+        $this->render('menu/details');
     }
 
     public function search($name=""){

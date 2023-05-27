@@ -7,7 +7,7 @@ class App{
     /**
      * phân tích URL
      */
-    public function parseURL(){
+    private function parseURL(){
         if(isset($_SERVER['REQUEST_URI'])){
             $uri = trim($_SERVER['REQUEST_URI'],'/');
             $uri = explode('/',$uri);
