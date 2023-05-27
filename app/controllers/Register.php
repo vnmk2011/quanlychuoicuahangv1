@@ -5,7 +5,7 @@ class Register extends baseController{
         $this->model = $this->loadModel('registerModel');
     }
     public function index(){
-        echo $this->model->post();
+        $this->render('register');
     }
 }
  ?>

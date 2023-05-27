@@ -1,7 +1,7 @@
 <?php
-class Home {
+class Home extends baseController{
     public function index(){
-        echo "Home - index";
+        $this->render("home");
     }
     
 }

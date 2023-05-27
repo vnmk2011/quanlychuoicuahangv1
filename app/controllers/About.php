@@ -1,5 +1,5 @@
 <?php
-class About {
+class About  {
     public function index(){
         echo "About index";
     }

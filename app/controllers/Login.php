@@ -6,7 +6,7 @@ class Login extends baseController{
     }
 
     public function index(){
-        $this->model->post();
+        $this->render('login');
     }
 }
  ?>
