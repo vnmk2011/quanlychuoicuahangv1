@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__."/connectDB.php";
 class registerModel extends connectDB {
     private $connect;
     public function __construct(){
