@@ -1,4 +1,4 @@
-function logout(){
+async function logout(){
     let reqPromise = new Promise((resolve, reject) => {
         var req = new XMLHttpRequest();
         req.open("POST", "/logout", true);
@@ -9,17 +9,11 @@ function logout(){
         }else{
             reject(req.responseText);
         }
-      };
+      };    
     req.send("logout=true");
     });
-
-    reqPromise.then(() => {
-    }
-    ).catch((error) => {
-        console.log(error);
-    }   
-    );
     
+
 }
 function reLoad(){
     location.reload();
