@@ -9,10 +9,15 @@ services:
       - php
     ports:
       - "80:80"
+    volumes:
+      - .:/var/www/html
   php:
     container_name: web_php
     build: 
       context: .
       dockerfile: ./php/Dockerfile
     working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+      
     

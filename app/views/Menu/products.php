@@ -14,9 +14,7 @@
     </div>
     <div class="product-items"></div>
     <?php 
-      foreach ($data[0] as $key => $value) {
-        echo $value;
-      }
+      
     ?>
   </div>
 </section>

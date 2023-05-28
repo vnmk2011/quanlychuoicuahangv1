@@ -5,7 +5,8 @@ class Menu extends baseController{
         $this->model = $this->loadModel('menuModel');
     }
     public function index(){
-       $this->render('menu/products', $this->parseData());
+       $this->render('menu/products');
+       var_dump($this->parseData()[0]);
     }
     public function parseData(){
         $result = $this->model->get();
@@ -13,7 +14,7 @@ class Menu extends baseController{
         while($row = $result->fetch_assoc()){
             $html = '<div class="item">';
             $html .= '<div class="img-content"><figure>';
-            $html .= '<img src="/img/product/'.$row['image'].'" alt="'.$row['name'].'" loading="lazy">';
+            $html .= '<img src="/public/images/'.$row['image'].'" alt="'.$row['name'].'" loading="lazy">';
             $html .= '</figure></div>';
             $html .= '<div class="description">';
             $html .= '<div class="name-product">';

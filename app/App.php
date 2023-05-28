@@ -20,25 +20,27 @@ class App
     }
     public function Run()
     {
+        
         $url = $this->parseURL();
         //xử lý controller là phần tử 0 của mảng
         if ($url[0] !== "") {
             $this->controller = ucfirst($url[0]);
         }
         // kiểm tra file controller có tồn tại hay không
-        if (file_exists("./app/controllers/" . $this->controller . ".php")) {
-            require_once __DIR__ . "./controllers/" . $this->controller . ".php";
+        if (file_exists(__DIR__ ."//controllers//" . $this->controller . ".php")) {
+            require_once __DIR__ . "//controllers//" . $this->controller . ".php";
             //check class có tồn tại trong file hay không
             if (class_exists($this->controller)) {
                 $this->controller = new $this->controller;
             } else {
-                require_once __DIR__ . "./views/404.php";
+                require_once __DIR__ . "/views/404.php";
                 exit;
             }
             // khi khởi tạo controller xong thì xóa phần tử 0 của mảng đi
             unset($url[0]);
         } else {
-            require_once __DIR__ . "./views/404.php";
+            
+            require_once __DIR__ . "/views/404.php";
             exit;
         }
 
@@ -59,7 +61,7 @@ class App
         if (method_exists($this->controller, $this->action)) {
             call_user_func_array([$this->controller, $this->action], $this->params);
         } else {
-            require_once __DIR__ . "./views/404.php";
+            require_once __DIR__ . "/views/404.php";
             exit;
         }
     }
