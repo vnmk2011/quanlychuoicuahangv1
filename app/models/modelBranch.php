@@ -1,5 +1,4 @@
 <?php
-require_once 'connectDB.php';
 class modelBranch extends connectDB{
     private $connect;
     public function __construct(){

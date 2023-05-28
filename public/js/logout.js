@@ -1,11 +1,26 @@
 function logout(){
-    var req = new XMLHttpRequest();
-    req.open("POST", "/logout", true);
-    req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    req.onreadystatechange = () => {
+    let reqPromise = new Promise((resolve, reject) => {
+        var req = new XMLHttpRequest();
+        req.open("POST", "/logout", true);
+        req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        req.onreadystatechange = () => {
         if (req.readyState === XMLHttpRequest.DONE && req.status === 200) {
-            location.reload();
+            resolve(reLoad());
+        }else{
+            reject(req.responseText);
         }
       };
     req.send("logout=true");
+    });
+
+    reqPromise.then(() => {
+    }
+    ).catch((error) => {
+        console.log(error);
+    }   
+    );
+    
+}
+function reLoad(){
+    location.reload();
 }
