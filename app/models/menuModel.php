@@ -4,7 +4,7 @@ class menuModel extends connectDB{
     public function __construct(){
         $this->connect = $this->connect();
     }
-    public function get(){
+    public function getAll(){
         $sql = "SELECT * FROM product";
         $result = $this->connect->query($sql);
         return $result;
