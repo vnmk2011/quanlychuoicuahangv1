@@ -73,7 +73,7 @@
               <a href="/views/profile.php"><?php echo $_SESSION["user"]["name"];?></a>
             </div>
             <div class="auth-item" >
-              <a href="#" title="Click để đăng xuất" id ="logout" onclick="logout(this)" data-logout="hello">Đăng xuất</a>
+              <a href="#" title="Click để đăng xuất" id ="logout" onclick="logout()">Đăng xuất</a>
             </div>
           <?php }else{?>
             <div class="auth-item">
