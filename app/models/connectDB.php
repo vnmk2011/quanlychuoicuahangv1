@@ -2,7 +2,7 @@
 class connectDB
 {
     private $host = "localhost";
-    private $user = "conggioi";
+    private $user = "root";
     private $pass = "";
     private $dbname = "quanlychuoicuahang";
     public function connect()
