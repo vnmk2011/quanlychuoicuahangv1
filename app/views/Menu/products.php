@@ -25,9 +25,11 @@
           </figure>
         </div>
         <div class="description">
-          <div class="name-product">
+          <div class="name-product">  
             <h3><a href="Menu/product/<?php echo $row["id"] ?>"><?php echo $row["name"] ?></a></h3>
+            <?php if($row["discount"] > 0 && $row["discount"] != NULL){ ?>
             <span class="sale" title="Giảm giá <?php echo $row["discount"] ?>%">-<?php echo $row["discount"] ?>%</span>
+            <?php } ?>
           </div>
         </div>
         <div class="price-add">
