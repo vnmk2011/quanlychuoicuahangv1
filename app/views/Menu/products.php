@@ -54,5 +54,11 @@
   </div>
 </section>
 <section class="pagination">
-  <div class="container-pagination"></div>
+  <div class="container-pagination">
+    <a href="/Menu/page/<?php echo $data[1]; ?>" title="Trang trước">«</a>
+    <?php for ($i = 1; $i <= $data[4]; $i++){ ?>
+      <a href="/Menu/page/<?php echo $i; ?>" title="Trang <?php echo $i; ?>" <?php echo $data[3] == $i ?'class="active"': ""; ?>><?php echo $i; ?></a>
+    <?php } ?>
+    <a href="/Menu/page/<?php echo $data[2]; ?>" title="Trang sau">»</a>     
+  </div>
 </section>

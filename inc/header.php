@@ -83,7 +83,6 @@
               <a href="/Register" title="Click để đăng ký">Đăng ký</a>
             </div>
           <?php }?>
-            
         </div>
       </div>
     </header>
