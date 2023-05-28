@@ -18,7 +18,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="/js/logout.js"></script>
+    <script src="/public/js/logout.js"></script>
     <script src="/js/cart.js"></script>
     <script src="/js/order.js"></script>
   </head>
@@ -73,7 +73,7 @@
               <a href="/views/profile.php"><?php echo $_SESSION["user"]["name"];?></a>
             </div>
             <div class="auth-item" >
-              <a href="#" title="Click để đăng xuất" id ="logout" onclick="logout()">Đăng xuất</a>
+              <a href="#" title="Click để đăng xuất" id ="logout" onclick="logout(this)" data-logout="hello">Đăng xuất</a>
             </div>
           <?php }else{?>
             <div class="auth-item">
@@ -88,4 +88,5 @@
       </div>
     </header>
     <main>
+
 
