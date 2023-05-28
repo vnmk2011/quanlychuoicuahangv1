@@ -55,7 +55,7 @@
             <ul>
               <li><a href="/" title="Trang chủ">Trang chủ</a></li>
               <li><a href="/About" title="Giới thiệu">Giới thiệu</a></li>
-              <li><a href="/Menu" title="Thực đơn">Thực đơn</a></li>
+              <li><a href="/Menu/page/" title="Thực đơn">Thực đơn</a></li>
               <?php if(isset($_SESSION['user'])){ ?>
               <li class="cart"><a href="/Cart" title="Giỏ hàng">Giỏ hàng</a>
                 <span class="count-cart"> <?php echo count($_SESSION['cart']); ?></span>

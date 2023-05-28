@@ -8,8 +8,10 @@ class Menu extends baseController{
     public function index(){
        $this->render('menu/products', $this->model->getAll());
     }
-    public function page($currentPage){
+    public function page($currentPage = 1){
+    
         $this->render('menu/products', $this->getProducts($currentPage));
+        
     }
     private function getProducts($currentPage){
         $limit = 10;
