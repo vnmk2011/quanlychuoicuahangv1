@@ -1,4 +1,5 @@
 <?php
+
 class menuModel extends connectDB{
     private $connect;
     public function __construct(){
@@ -9,6 +10,15 @@ class menuModel extends connectDB{
         $result = $this->connect->query($sql);
         return $result;
     }
+    public function productNumber(){
+        $sql = "SELECT COUNT(*) FROM product";
+        $result = $this->connect->query($sql);
+        return $result;
+    }
+    public function getProducts($start, $limit){
+        $sql = "SELECT * FROM product LIMIT $start, $limit";
+        $result = $this->connect->query($sql);
+        return $result;
+    }
 }
-
 ?>
