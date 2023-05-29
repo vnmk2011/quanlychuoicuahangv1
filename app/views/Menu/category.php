@@ -4,7 +4,7 @@
     <div class="tool-bar">
       <div class="product-type">
         <ul>
-          <?php while($row = $data[5]->fetch_assoc()){?>
+          <?php while($row = $data[1]->fetch_assoc()){?>
           <li><a href="<?php echo "/Menu/category/". $row['id'] ;?>"><?php echo $row["name"]; ?></a></li>
           <?php }?>
         </ul>
@@ -51,12 +51,4 @@
     </div>
   </div>
 </section>
-<section class="pagination">
-  <div class="container-pagination">
-    <a href="/Menu/page/<?php echo $data[1]; ?>" title="Trang trước">«</a>
-    <?php for ($i = 1; $i <= $data[4]; $i++){ ?>
-      <a href="/Menu/page/<?php echo $i; ?>" title="Trang <?php echo $i; ?>" <?php echo $data[3] == $i ?'class="active"': ""; ?>><?php echo $i; ?></a>
-    <?php } ?>
-    <a href="/Menu/page/<?php echo $data[2]; ?>" title="Trang sau">»</a>     
-  </div>
-</section>
+

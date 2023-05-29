@@ -16,8 +16,11 @@ class Menu extends baseController{
         $start = ($currentPage - 1) * $limit;
         $previousPage = $currentPage > 1 ? $currentPage - 1 : 1;
         $nextPage = $currentPage < $totalPage ? $currentPage + 1 : $totalPage;
-        $this->render('menu/products', $this->getProducts($start, $limit) , $previousPage, $nextPage, $currentPage, $totalPage);
+        $this->render('menu/products', $this->getProducts($start, $limit) , $previousPage, $nextPage, $currentPage, $totalPage, $this->model->getCategory());
         
+    }
+    public function category($id){
+        $this->render('menu/category', $this->model->getProductByCategory($id), $this->model->getCategory());
     }
     private function getProducts($start, $limit){
         $result = $this->model->getProducts($start, $limit);

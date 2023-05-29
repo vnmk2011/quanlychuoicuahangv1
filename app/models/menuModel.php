@@ -20,5 +20,15 @@ class menuModel extends connectDB{
         $result = $this->connect->query($sql);
         return $result;
     }
+    public function getCategory(){
+        $sql = "SELECT * FROM category";
+        $result = $this->connect->query($sql);
+        return $result;
+    }
+    public function getProductByCategory($id){
+        $sql = "SELECT * FROM product WHERE category_id = $id";
+        $result = $this->connect->query($sql);
+        return $result;
+    }
 }
 ?>
