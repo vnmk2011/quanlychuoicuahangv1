@@ -39,7 +39,7 @@
               title="Thêm vào giỏ hàng"
               id="product-id-<?php echo $row["id"]; ?>"
               data-id="<?php echo $row["id"]; ?>"
-              data-name="Bánh mì thịt chả"
+              data-name="<?php echo $row["name"]; ?>"
               data-price="<?php echo (int)$row['price']; ?>"
               data-image="/public/images/product/<?php echo $row['image'];?>"
               data-quantity="1"

@@ -19,7 +19,7 @@
     ></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="/public/js/logout.js"></script>
-    <script src="/js/cart.js"></script>
+    <script src="/public/js/addCart.js"></script>
     <script src="/js/order.js"></script>
   </head>
   <body>

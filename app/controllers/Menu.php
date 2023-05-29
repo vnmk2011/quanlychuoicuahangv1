@@ -23,6 +23,29 @@ class Menu extends baseController{
         $result = $this->model->getProducts($start, $limit);
         return $result;
     }
+    public function addCart(){
+        if(isset($_SERVER["REQUEST_METHOD"])&& $_SERVER["REQUEST_METHOD"] == 'POST'){
+            $id = $_POST["id"];
+            $name = $_POST["name"];
+            $price = $_POST["price"];
+            $image = $_POST["image"];
+            $quantity = $_POST["quantity"];
+            $product = array(
+                "id" => $id,
+                "name" => $name,
+                "price" => $price,
+                "image" => $image,
+                "quantity" => $quantity
+            );
+            if(array_key_exists($id, $_SESSION["cart"])){
+                $_SESSION["cart"][$id]["quantity"] += $quantity;
+            }else{
+                $_SESSION["cart"][$id] = $product;
+            }
+            var_dump($_SESSION["cart"]);
+            
+        }
+    }
 
 }
 

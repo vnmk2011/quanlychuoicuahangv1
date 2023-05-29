@@ -5,16 +5,13 @@ async function logout(){
         req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         req.onreadystatechange = () => {
         if (req.readyState === XMLHttpRequest.DONE && req.status === 200) {
-            resolve(reLoad());
+            resolve(location.reload());
         }else{
             reject(req.responseText);
         }
       };    
     req.send("logout=true");
     });
-    
+    await reqPromise;
 
-}
-function reLoad(){
-    location.reload();
 }
