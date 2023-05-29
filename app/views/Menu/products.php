@@ -1,8 +1,11 @@
 <div class="alert-popup"></div>
 <section class="products">
+  <div >
+
+  </div>
   <div class="container-product">
     <div class="tool-bar">
-      <div class="product-type">
+      <div class="product-type ">
         <ul>
           <?php while($row = $data[5]->fetch_assoc()){?>
           <li><a href="<?php echo "/Menu/category/". $row['id'] ;?>"><?php echo $row["name"]; ?></a></li>
@@ -24,7 +27,7 @@
         </div>
         <div class="description">
           <div class="name-product">  
-            <h3><a href="Menu/product/<?php echo $row["id"] ?>"><?php echo $row["name"] ?></a></h3>
+            <h3><a href="/Menu/details/<?php echo $row["id"] ?>"><?php echo $row["name"] ?></a></h3>
             <?php if($row["discount"] > 0 && $row["discount"] != NULL){ ?>
             <span class="sale" title="Giảm giá <?php echo $row["discount"] ?>%">-<?php echo $row["discount"] ?>%</span>
             <?php } ?>

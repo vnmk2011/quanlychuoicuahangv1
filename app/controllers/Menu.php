@@ -19,6 +19,9 @@ class Menu extends baseController{
         $this->render('menu/products', $this->getProducts($start, $limit) , $previousPage, $nextPage, $currentPage, $totalPage, $this->model->getCategory());
         
     }
+    public function details($id){
+        $this->render('menu/details', $this->model->getProduct($id));
+    }
     public function category($id){
         $this->render('menu/category', $this->model->getProductByCategory($id), $this->model->getCategory());
     }
@@ -45,7 +48,9 @@ class Menu extends baseController{
             }else{
                 $_SESSION["cart"][$id] = $product;
             }
-            var_dump($_SESSION["cart"]);
+            ob_clean();
+            header('Content-Type: application/json');
+            echo json_encode($_SESSION["cart"]);
             
         }
     }

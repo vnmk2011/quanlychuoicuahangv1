@@ -15,6 +15,11 @@ class menuModel extends connectDB{
         $result = $this->connect->query($sql);
         return $result;
     }
+    public function getProduct($id){
+        $sql = "SELECT * FROM product WHERE id = $id";
+        $result = $this->connect->query($sql);
+        return $result;
+    }
     public function getProducts($start, $limit){
         $sql = "SELECT * FROM product LIMIT $start, $limit";
         $result = $this->connect->query($sql);
