@@ -9,14 +9,13 @@ class Menu extends baseController{
        $this->render('menu/products', $this->model->getAll());
     }
     public function page($currentPage = 1){
-        $limit = 10;
-        $totalPage = ceil((int)$this->model->productNumber()->fetch_assoc()["COUNT(*)"] / $limit);
+        $totalPage = ceil((int)$this->model->productNumber()->fetch_assoc()["COUNT(*)"] / LIMIT_PAGE);
         // Nếu số trang hiện tại lớn hơn tổng số trang thì gán bằng tổng số trang và ngược lại nhỏ hơn 1 thì gán bằng 1
         $currentPage =  $currentPage > $totalPage ?  $totalPage : ($currentPage < 1 ? 1 : $currentPage);
-        $start = ($currentPage - 1) * $limit;
+        $start = ($currentPage - 1) * LIMIT_PAGE;
         $previousPage = $currentPage > 1 ? $currentPage - 1 : 1;
         $nextPage = $currentPage < $totalPage ? $currentPage + 1 : $totalPage;
-        $this->render('menu/products', $this->getProducts($start, $limit) , $previousPage, $nextPage, $currentPage, $totalPage, $this->model->getCategory());
+        $this->render('menu/products', $this->getProducts($start) , $previousPage, $nextPage, $currentPage, $totalPage, $this->model->getCategory());
         
     }
     public function details($id){
@@ -25,8 +24,8 @@ class Menu extends baseController{
     public function category($id){
         $this->render('menu/category', $this->model->getProductByCategory($id), $this->model->getCategory());
     }
-    private function getProducts($start, $limit){
-        $result = $this->model->getProducts($start, $limit);
+    private function getProducts($start){
+        $result = $this->model->getProducts($start, LIMIT_PAGE);
         return $result;
     }
     public function addCart(){

@@ -1,10 +1,10 @@
 <?php
 class connectDB
 {
-    private $host = "3.25.254.214";
-    private $user = "conggioi";
-    private $pass = "";
-    private $dbname = "quanlychuoicuahang";
+    private $host = DB_HOST;
+    private $user = DB_USER;
+    private $pass = DB_PASS;
+    private $dbname = DB_NAME;
     public function connect()
     {
         $connect = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
