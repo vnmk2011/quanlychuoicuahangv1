@@ -30,6 +30,7 @@ class Login extends baseController{
                 'name' => $user['name'],
                 'email' => $user['email'],
                 'address' => $user['address'],
+                'phone' => $user['phone'],
             );
             $__cart = [];
             // khởi tạo phiên đăng nhập

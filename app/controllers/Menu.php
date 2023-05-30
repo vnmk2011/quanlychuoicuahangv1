@@ -31,30 +31,44 @@ class Menu extends baseController{
     public function addCart(){
         if(isset($_SERVER["REQUEST_METHOD"])&& $_SERVER["REQUEST_METHOD"] == 'POST'){
             $id = $_POST["id"];
-            $name = $_POST["name"];
-            $price = $_POST["price"];
-            $image = $_POST["image"];
-            $quantity = $_POST["quantity"];
-            $product = array(
-                "id" => $id,
+            $msg = array();
+            $msg["status"] = "200";
+            // Trừ số lượng sản phẩm trong giỏ hàng
+            if(array_key_exists($id, $_SESSION["cart"]) && isset($_POST["decrease"])){
+                $_SESSION["cart"][$id]["quantity"] -= 1;
+                $msg["msg"] = "Decrease quantity success";
+                $msg["quantity"] = $_SESSION["cart"][$id]["quantity"];
+                ob_clean();
+                header('Content-Type: application/json');
+                echo json_encode($msg);
+            }elseif(array_key_exists($id, $_SESSION["cart"])){
+                $_SESSION["cart"][$id]["quantity"] += 1;
+                $msg["quantity"] = $_SESSION["cart"][$id]["quantity"];
+                $msg["total"] = count($_SESSION["cart"]);
+                $msg["msg"] = "Increase quantity success";
+                ob_clean();
+                header('Content-Type: application/json');
+                echo json_encode($msg);
+            }else{
+                $name = $_POST["name"];
+                $price = $_POST["price"];
+                $image = $_POST["image"];
+                $quantity = $_POST["quantity"];
+                $product = array(
                 "name" => $name,
                 "price" => $price,
                 "image" => $image,
                 "quantity" => $quantity
-            );
-            $msg = array();
-            if(array_key_exists($id, $_SESSION["cart"])){
-                $_SESSION["cart"][$id]["quantity"] += $quantity;
-            }else{
+                );
                 $_SESSION["cart"][$id] = $product;
+                $msg["total"] = count($_SESSION["cart"]);
+                ob_clean();
+                header('Content-Type: application/json');
+                echo json_encode($msg);
             }
-            $msg["status"] = "success";
-            $msg["total"] = count($_SESSION["cart"]);
-            ob_clean();
-            header('Content-Type: application/json');
-            echo json_encode($msg);
             
-        }
+            
+        } 
     }
 
 }

@@ -41,7 +41,7 @@
               data-id="<?php echo $row["id"]; ?>"
               data-name="<?php echo $row["name"]; ?>"
               data-price="<?php echo (int)$row['price']; ?>"
-              data-image="/public/images/product/<?php echo $row['image'];?>"
+              data-image="/public/images/<?php echo $row['image'];?>"
               data-quantity="1"
               onclick="addCart(this)"
               ><i class="fa-solid fa-cart-plus"></i
