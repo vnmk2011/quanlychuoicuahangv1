@@ -1,7 +1,6 @@
 <div class="alert-popup"></div>
 <section class="products">
   <div >
-
   </div>
   <div class="container-product">
     <div class="tool-bar">

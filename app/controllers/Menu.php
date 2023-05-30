@@ -43,14 +43,17 @@ class Menu extends baseController{
                 "image" => $image,
                 "quantity" => $quantity
             );
+            $msg = array();
             if(array_key_exists($id, $_SESSION["cart"])){
                 $_SESSION["cart"][$id]["quantity"] += $quantity;
             }else{
                 $_SESSION["cart"][$id] = $product;
             }
+            $msg["status"] = "success";
+            $msg["total"] = count($_SESSION["cart"]);
             ob_clean();
             header('Content-Type: application/json');
-            echo json_encode($_SESSION["cart"]);
+            echo json_encode($msg);
             
         }
     }

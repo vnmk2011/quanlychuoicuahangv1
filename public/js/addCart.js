@@ -10,7 +10,14 @@
     req.onreadystatechange = () => {
         if (req.readyState === XMLHttpRequest.DONE && req.status === 200) {
             let data = JSON.parse(req.responseText);
-            console.log(data);
+            document.getElementsByClassName("count-cart")[0].innerHTML = data.total;
+            let alert = document.querySelector(".alert-popup");
+            alert.style.display = "flex";
+            alert.innerHTML = "Đã thêm vào giỏ hàng";
+            setTimeout(() => {
+                alert.style.display = "none";
+            }
+                , 3000);
         } 
     };
     req.send("id=" + id + "&name=" + name + "&price=" + price + "&image=" + image + "&quantity=1");

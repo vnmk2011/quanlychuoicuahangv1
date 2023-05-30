@@ -1,8 +1,8 @@
 <?php
 class connectDB
 {
-    private $host = "localhost";
-    private $user = "root";
+    private $host = "3.25.254.214";
+    private $user = "conggioi";
     private $pass = "";
     private $dbname = "quanlychuoicuahang";
     public function connect()
