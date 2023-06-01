@@ -11,6 +11,7 @@ function increaseValue(e){
     req.onreadystatechange = () => {
         if (req.readyState === XMLHttpRequest.DONE && req.status === 200) {
             priceElement.innerHTML = "Đơn giá: " + parsePrice(String(currentValue.value * price)) + "đ";
+            
         } 
     }
     req.send("id=" + productId);
@@ -48,11 +49,12 @@ function removeCart(e){
     req.send("id=" + id );
 }
 function price(e){
-    var id = e.getAttribute("data-product-id");
+    var id = e.getAttribute("data-cart-id");
     var price = e.getAttribute("data-price");
-    var currentValue = document.getElementById("cart-id-"+id);
     var priceElement = document.getElementById("price-product-" + id);
-    priceElement.innerHTML = "Đơn giá: " + parsePrice(String(currentValue.value * price)) + "đ";
+    console.log(e.value);
+    
+    priceElement.innerHTML = "Đơn giá: " + parsePrice(String(parseInt(e.value) * price)) + "đ";
 }
 function parsePrice(price){
     return price.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');

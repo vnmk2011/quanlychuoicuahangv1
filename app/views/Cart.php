@@ -23,9 +23,9 @@
             <div class="count">  
               <button data-price="<?php echo (int)$value["price"]; ?>" data-cart-id="cart-id-<?php echo $key;?>" data-product-id="<?php echo $key;?>" onclick="decreaseValue(this)" >
                 <i class="fa-solid fa-minus"></i></button
-              ><input type="text" id="cart-id-<?php echo $key;?>" value="<?php echo $value["quantity"]; ?>" data-price="<?php echo (int)$value["price"]; ?>" onchange="price(this)" data-cart-id="<?php echo $key;?>"/><button data-product-id="<?php echo $key;?>" data-price="<?php echo (int)$value["price"]; ?>" data-cart-id="cart-id-<?php echo $key;?>" 
-                onclick="increaseValue(this)" 
-              >
+              ><input type="text" id="cart-id-<?php echo $key;?>" value="<?php echo $value["quantity"]; ?>" data-price="<?php echo (int)$value["price"]; ?>" onchange="price(this)" data-cart-id="<?php echo $key;?>"/>
+              <button data-product-id="<?php echo $key;?>" data-price="<?php echo (int)$value["price"]; ?>" data-cart-id="cart-id-<?php echo $key;?>" 
+                onclick="increaseValue(this)">
                 <i class="fa-solid fa-plus"></i>
               </button>
             </div>

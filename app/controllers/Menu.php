@@ -38,6 +38,7 @@ class Menu extends baseController{
                 $_SESSION["cart"][$id]["quantity"] -= 1;
                 $msg["msg"] = "Decrease quantity success";
                 $msg["quantity"] = $_SESSION["cart"][$id]["quantity"];
+                $msg["totalPrice"] = $this->totalPrice();
                 ob_clean();
                 header('Content-Type: application/json');
                 echo json_encode($msg);
@@ -46,6 +47,7 @@ class Menu extends baseController{
                 $msg["quantity"] = $_SESSION["cart"][$id]["quantity"];
                 $msg["total"] = count($_SESSION["cart"]);
                 $msg["msg"] = "Increase quantity success";
+                $msg["totalPrice"] = $this->totalPrice();
                 ob_clean();
                 header('Content-Type: application/json');
                 echo json_encode($msg);
@@ -69,6 +71,14 @@ class Menu extends baseController{
             
             
         } 
+    }
+    private function totalPrice()
+    {
+        $total = array_reduce($_SESSION["cart"], function ($prev, $current) {
+            return $prev + $current['price'] * $current['quantity'];
+        }, 0);
+        $_SESSION['totalPrice'] = $total;
+        return $total;
     }
 
 }
