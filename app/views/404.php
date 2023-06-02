@@ -1,4 +1,7 @@
-<?php ob_clean(); ?>
+<?php if (ob_get_level() > 0) {
+    ob_clean();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

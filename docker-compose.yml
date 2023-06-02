@@ -11,6 +11,7 @@ services:
       - "80:80"
     volumes:
       - .:/var/www/html
+      
   php:
     container_name: web_php
     build: 

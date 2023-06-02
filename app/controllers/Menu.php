@@ -40,7 +40,9 @@ class Menu extends baseController{
                 $msg["quantity"] = $_SESSION["cart"][$id]["quantity"];
                 $msg["totalPrice"] = $this->totalPrice();
                 $_SESSION['totalPrice'] = $msg["totalPrice"];
-                ob_clean();
+                if (ob_get_level() > 0) {
+                    ob_clean();
+                }
                 header('Content-Type: application/json');
                 echo json_encode($msg);
             }elseif(array_key_exists($id, $_SESSION["cart"])){
@@ -51,7 +53,9 @@ class Menu extends baseController{
                 $msg["msg"] = "Increase quantity success";
                 $msg["totalPrice"] = $this->totalPrice();
                 $_SESSION['totalPrice'] = $msg["totalPrice"];
-                ob_clean();
+                if (ob_get_level() > 0) {
+                    ob_clean();
+                }
                 header('Content-Type: application/json');
                 echo json_encode($msg);
             }else{
@@ -68,7 +72,9 @@ class Menu extends baseController{
                 );
                 $_SESSION["cart"][$id] = $product;
                 $msg["total"] = count($_SESSION["cart"]);
-                ob_clean();
+                if (ob_get_level() > 0) {
+                    ob_clean();
+                }
                 header('Content-Type: application/json');
                 echo json_encode($msg);
             }

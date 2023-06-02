@@ -15,7 +15,7 @@
                             </div>
                             <button id="button">Đăng Nhập</button>
                         </form>
-                        <a class="register2" title="Click vào đây để đăng ký" href="/register">Chưa có tài khoản? Đăng ký ngay</a>
+                        <a class="register2" title="Click vào đây để đăng ký" href="/Register">Chưa có tài khoản? Đăng ký ngay</a>
                     </div>
                 </div>
                 <div class="img1">
