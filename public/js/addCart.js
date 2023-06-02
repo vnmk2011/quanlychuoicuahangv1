@@ -1,4 +1,4 @@
- function addCart(e) {
+function addCart(e) {
     if (document.getElementById('logout') == null){
         window.location.href = "/login";
         return;
