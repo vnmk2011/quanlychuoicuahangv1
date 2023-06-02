@@ -2,9 +2,7 @@ version: '3.3'
 services:
   nginx:
     container_name: webserver_nginx
-    build: 
-      context: .
-      dockerfile: ./nginx/Dockerfile
+    build: ./nginx
       
     command: nginx -g "daemon off;"
     volumes:
@@ -16,9 +14,7 @@ services:
       - web
   php:
     container_name: web_php
-    build: 
-      context: .
-      dockerfile: ./php/Dockerfile
+    build: ./php
     working_dir: /var/www/html
     networks:
       - web
