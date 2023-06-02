@@ -34,14 +34,13 @@ class App
                 $this->controller = new $this->controller;
             } else {
                 require_once __DIR__ . "/views/404.php";
-                exit;
+              
             }
             // khi khởi tạo controller xong thì xóa phần tử 0 của mảng đi
             unset($url[0]);
         } else {
-            
             require_once __DIR__ . "/views/404.php";
-            exit;
+            
         }
 
         // xử lý action là phần tử 1 của mảng
@@ -62,7 +61,7 @@ class App
             call_user_func_array([$this->controller, $this->action], $this->params);
         } else {
             require_once __DIR__ . "/views/404.php";
-            exit;
+           
         }
     }
 }
