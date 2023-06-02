@@ -29,6 +29,7 @@ class Menu extends baseController{
         return $result;
     }
     public function addCart(){
+        ob_end_clean();
         if(isset($_SERVER["REQUEST_METHOD"])&& $_SERVER["REQUEST_METHOD"] == 'POST'){
             $id = $_POST["id"];
             $msg = array();
@@ -40,11 +41,9 @@ class Menu extends baseController{
                 $msg["quantity"] = $_SESSION["cart"][$id]["quantity"];
                 $msg["totalPrice"] = $this->totalPrice();
                 $_SESSION['totalPrice'] = $msg["totalPrice"];
-                if (ob_get_level() > 0) {
-                    ob_clean();
-                }
                 header('Content-Type: application/json');
                 echo json_encode($msg);
+
             }elseif(array_key_exists($id, $_SESSION["cart"])){
                 // Khi sản phẩm đã có trong giỏ hàng
                 $_SESSION["cart"][$id]["quantity"] += 1;
@@ -53,9 +52,6 @@ class Menu extends baseController{
                 $msg["msg"] = "Increase quantity success";
                 $msg["totalPrice"] = $this->totalPrice();
                 $_SESSION['totalPrice'] = $msg["totalPrice"];
-                if (ob_get_level() > 0) {
-                    ob_clean();
-                }
                 header('Content-Type: application/json');
                 echo json_encode($msg);
             }else{
@@ -72,9 +68,6 @@ class Menu extends baseController{
                 );
                 $_SESSION["cart"][$id] = $product;
                 $msg["total"] = count($_SESSION["cart"]);
-                if (ob_get_level() > 0) {
-                    ob_clean();
-                }
                 header('Content-Type: application/json');
                 echo json_encode($msg);
             }
