@@ -21,126 +21,194 @@
   padding: 10px;
 }
 
-.container-product {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 3% 3%;
-  background-color: #fffffb;
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
 }
-.tool-bar {
-  width: 20%;
-  margin-right: 1rem;
-  position: sticky;
-  left: 0;
-  top:80px;
+body {
+    font-family: 'SF Pro Display', sans-serif;
+    
+}
+.main-menu{
+    min-height: 756px;
+    padding: 20px 38px;
+}
+.main-menu, .container-menu{
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+.container-category{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.category-list{
+    display: flex;
+    height: 100%;
+}
+.item-category{
+    margin-right: 17px;
+    width: 95px;
+}
+.item-category a{
+    width: 100%;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+.img-category{
+    padding: 4px;
+    background: rgb(169, 202, 230);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    position: relative;
+    transition: transform ease 0.4s ;
+}
+.img-category:hover{
+    transform: translateY(-10px) ;
+    
+
+}
+.item-category img{
+    width: 94px;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+   
 }
 
-.product-type {
-  margin-bottom: 1rem;
-  border-right:1px solid #333;
+.item-category .name-category{
+    text-align: center;
+    display: block;
+    
 }
-
-.product-type ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* CSS cho danh sách sản phẩm */
+.container-product{
+    margin-top: 30px;
+    width: 100%;
+    min-height: 600px;
 }
-
-.product-type li {
-  margin-bottom: 0.5rem;
+.product-list{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -24px;
 }
-
-.product-type a {
-  color: #333;
-  text-decoration: none;
-  font-size: 1rem;
+.item-product{
+    max-width: 25%;
+    flex: 1 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
 }
-
-.product-type a:hover {
-  color: #f00;
+.inner-product{
+    padding: 12px 12px 60px;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    transition: all ease .7s;
 }
-
-/* Thiết lập hiển thị cho sản phẩm */
-.product-items {
-  width: 70%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-  row-gap: 3rem;
-  justify-content: space-between;
+.inner-product:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0,0,0,.3);
 }
-
-.item {
-  background-color: #fefaf6;
-  padding: 1rem;
-  height: 350px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 4px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+.img-product{
+    min-height: 218px;
+    display: block;
+    position: relative;
+    height: auto;
 }
-
-figure{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+.img-product img{
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+   
 }
-.img-content img {
-  width: 200px;
-  height: 200px;
-  object-fit: fill;
-  background-position: center;
+.item-product a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-family: 'SF Pro Display', sans-serif;
 }
 .name-product{
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: space-between;
-  align-items: center;
+    font-family: 'SF Pro Display', sans-serif;
+    margin-bottom: 13px;
+    position: relative;
 }
-.name-product a{
-  text-decoration: none;
-  color: #333;
-  font-size: 1.4rem;
-  font-weight: 700;
-  font-family: var(--font-family);
+.price-product{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #FD8A8A;
+    position: relative;
 }
-.sale{
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: var(--font-family);
-  color: #f00;
-  animation: sale ease 1s infinite;
+.price-product span{
+    text-decoration: underline;
 }
-.price-add{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.3rem;
-  font-family: var(--font-family);
+.discount-product{
+    font-size: 14px;
+    font-weight: 400;
+    color: #9B9B9B;
+    margin-bottom: 13px;
+    text-decoration: line-through;
+    position: relative;
 }
-.price-add .add{
-  background-color: #e0e0de;
-  padding: 5px 10px;
-  border-radius: 8px;
-  transition: .3s ease;
-}
-.price-add .add:hover{
-  cursor: pointer;
-}
-.price-add i{
-  font-size: 1.6rem;
-  color: #333;
 
+.add-to-cart{
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.add-to-cart button{
+    padding: 10px 32px;
+    border: none;
+    background-color: #E97777;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+.add-to-cart button:hover{
+    background-color: #FF9494;
+}
+@media only screen and (max-width: 1024px){
+    .item-product{
+        max-width: 33.3333%;
+        flex: 1 33.3333%;
+    }
+}
+@media only screen and (max-width: 768px){
+    .item-product{
+        max-width: 50%;
+        flex: 1 50%;
+    }
+}
+@media only screen and (max-width: 480px){
+    .item-product{
+        max-width: 100%;
+        flex: 1 100%;
+    }
+} 
+
+/* Thiết lập phân trang */
 .container-pagination {
   display: flex;
   justify-content: center;

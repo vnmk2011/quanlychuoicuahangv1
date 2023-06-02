@@ -1,0 +1,302 @@
+[
+    {
+        "item": {
+            "category": "monmoi",
+            "image": "http://api.popeyes.vn/api/v1/files/ComboKpopChicken1pc.jpg",
+            "id": 3796,
+            "name": "1 miếng Gà Kpop ",
+            "price": 45000,
+            "description": "Gà KPop"
+        }
+    },
+    {
+        "item": {
+            "category": "ga-gionn",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_040934_1pcGTNM.jpg",
+            "id": 3113,
+            "name": "1 Miếng Gà Tắm Nước Mắm",
+            "price": 45000,
+            "description": "1 Miếng Gà Tắm Nước Mắm"
+        }
+    },
+    {
+        "item": {
+            "category": "ga-gionn",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_065744_2gkhngxng1ccajun.jpg",
+            "id": 3135,
+            "name": "Gà Và Hải Sản",
+            "price": 75000,
+            "description": "Gà Và Hải Sản (Phần gà được phục vụ ngẫu nhiên)"
+        }
+    },
+    {
+        "item": {
+            "category": "ga-gionn",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_072235_1ggin.jpg",
+            "id": 3109,
+            "name": "1 Miếng Gà Giòn",
+            "price": 38000,
+            "description": "1 Miếng Gà Giòn (Phần gà được phục vụ ngẫu nhiên)"
+        }
+    },
+    {
+        "item": {
+            "category": "gakhongxuong",
+            "image": "http://api.popeyes.vn/api/v1/files/11072022_050849_Gkhngxng3ming.jpg",
+            "id": 3114,
+            "name": "Gà Không Xương (3 Miếng)",
+            "price": 59000,
+            "description": "Gà Không Xương 3 Miếng +  1 Sốt Chấm Tự Chọn"
+        }
+    },
+    {
+        "item": {
+            "category": "gakhongxuong",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_072318_gakhongxng5ming.jpg",
+            "id": 3115,
+            "name": "Gà Không Xương (5 Miếng)",
+            "price": 79000,
+            "description": "Gà Không Xương (5 miếng) + 1 Sốt Tự Chọn "
+        }
+    },
+    {
+        "item": {
+            "category": "miyvacom",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_071102_cmBBQggin.jpg",
+            "id": 3195,
+            "name": "Combo C1",
+            "price": 44000,
+            "description": "Cơm BBQ + 1 Gà Giòn (Phần gà được phục vụ ngẫu nhiên)"
+        }
+    },
+    {
+        "item": {
+            "category": "miyvacom",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_074637_comgakhongxuongcanh.jpeg",
+            "id": 3196,
+            "name": "Combo C2",
+            "price": 44000,
+            "description": "Cơm BBQ + Canh Soup + 2 Gà Không Xương"
+        }
+    },
+    {
+        "item": {
+            "category": "miyvacom",
+            "image": "http://api.popeyes.vn/api/v1/files/ComboC3.png",
+            "id": 3197,
+            "name": "Combo C3",
+            "price": 54000,
+            "description": "Cơm BBQ + Gà Giòn + Canh Soup (Phần gà được phục vụ ngẫu nhiên)"
+        }
+    },
+    {
+        "item": {
+            "category": "miyvacom",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_074837_comGTNMbapcaitroncanhnuoc.jpeg",
+            "id": 3198,
+            "name": "Combo C4",
+            "price": 79000,
+            "description": "Cơm Trắng + Gà Tắm Nước Mắm + Canh Soup + Bắp Cải Trộn (Vừa) + 1 Thức Uống (Phần gà được phục vụ ngẫu nhiên)"
+        }
+    },
+    {
+        "item": {
+            "category": "miyvacom",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_051222_M.jpg",
+            "id": 3471,
+            "name": "Mì Ý",
+            "price": 45000,
+            "description": "Mì Ý (M)"
+        }
+    },
+    {
+        "item": {
+            "category": "miyvacom",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_073233_Miynuoc.jpeg",
+            "id": 3222,
+            "name": "Combo Mì Ý S2",
+            "price": 65000,
+            "description": "Mì Ý +  1 Thức Uống"
+        }
+    },
+    {
+        "item": {
+            "category": "miyvacom",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_073036_Miygagionnuoc.jpeg",
+            "id": 3223,
+            "name": "Combo Mì Ý S3",
+            "price": 95000,
+            "description": "Mì Ý + 1 Gà Giòn + 1 Thức Uống (Phần gà được phục vụ ngẫu nhiên)"
+        }
+    },
+    {
+        "item": {
+            "category": "miyvacom",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_072820_Miygagiongakhongxuongkhoaitaynghiennuoc.jpeg",
+            "id": 3224,
+            "name": "Combo Mì Ý S4",
+            "price": 145000,
+            "description": "Mì Ý + 1 Gà Giòn + 2 Gà Không Xương +1 Khoai Tây Nghiền (Vừa) + 2 Thức Uống (Phần gà được phục vụ ngẫu nhiên)"
+        }
+    },
+    {
+        "item": {
+            "category": "monankem",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_072154_snackmc.jpg",
+            "id": 3119,
+            "name": "Snack Mực",
+            "price": 45000,
+            "description": "Snack Mực"
+        }
+    },
+    {
+        "item": {
+            "category": "monankem",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_072046_snackc.jpg",
+            "id": 3120,
+            "name": "4 Miếng Snack Cá",
+            "price": 36000,
+            "description": "4 Miếng Snack Cá"
+        }
+    },
+    {
+        "item": {
+            "category": "monankem",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_071220_khoaitychin.jpg",
+            "id": 3415,
+            "name": "Khoai tây Chiên (Vừa)",
+            "price": 29000,
+            "description": "Khoai tây Chiên (Vừa)"
+        }
+    },
+    {
+        "item": {
+            "category": "monankem",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_071334_khoaitychin.jpg",
+            "id": 3416,
+            "name": "Khoai tây Chiên (Lớn)",
+            "price": 39000,
+            "description": "Khoai tây Chiên (Lớn)"
+        }
+    },
+    {
+        "item": {
+            "category": "monankem",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_071428_Khoaitynghin.jpg",
+            "id": 3417,
+            "name": "Khoai tây Nghiền (Vừa)",
+            "price": 19000,
+            "description": "Khoai tây Nghiền (Vừa)"
+        }
+    },
+    {
+        "item": {
+            "category": "monankem",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_065600_Khoaitynghin.jpg",
+            "id": 3418,
+            "name": "Khoai tây Nghiền (Lớn)",
+            "price": 39000,
+            "description": "Khoai tây Nghiền (Lớn)"
+        }
+    },
+    {
+        "item": {
+            "category": "monankem",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_065719_soup.jpg",
+            "id": 3419,
+            "name": "Canh Soup",
+            "price": 10000,
+            "description": "Soup"
+        }
+    },
+    {
+        "item": {
+            "category": "monankem",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_065822_cmtrng.jpg",
+            "id": 3420,
+            "name": "Cơm Trắng",
+            "price": 10000,
+            "description": "Cơm Trắng"
+        }
+    },
+    {
+        "item": {
+            "category": "monankem",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_063612_Donuttm.jpg",
+            "id": 3456,
+            "name": "Donut Tôm",
+            "price": 29000,
+            "description": "Donut Tôm"
+        }
+    },
+    {
+        "item": {
+            "category": "monankem",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_045116_bpcitrn.jpg",
+            "id": 3484,
+            "name": "Bắp Cải Trộn (Vừa)",
+            "price": 25000,
+            "description": "Bắp Cải Trộn (Vừa)"
+        }
+    },
+    {
+        "item": {
+            "category": "monankem",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_045649_bpcitrn.jpg",
+            "id": 3487,
+            "name": "Bắp Cải Trộn (Lớn)",
+            "price": 39000,
+            "description": "Bắp Cải Trộn (Lớn)"
+        }
+    },
+    {
+        "item": {
+            "category": "monankem",
+            "image": "http://api.popeyes.vn/api/v1/files/28092022_032044_popcorn1.jpg",
+            "id": 3506,
+            "name": "Popcorn ",
+            "price": 24000,
+            "description": "Popcorn Rong Biển"
+        }
+    },
+    {
+        "item": {
+            "category": "monankem",
+            "image": "http://api.popeyes.vn/api/v1/files/28092022_032216_popcorn3.jpg",
+            "id": 3507,
+            "name": "Popcorn BBQ",
+            "price": 29000,
+            "description": "Popcorn BBQ"
+        }
+    },
+    {
+        "item": {
+            "category": "monankem",
+            "image": "http://api.popeyes.vn/api/v1/files/28092022_032306_popcorn2.jpg",
+            "id": 3508,
+            "name": "Popcorn Sốt Phô Mai",
+            "price": 29000,
+            "description": "Popcorn Sốt Phô Mai"
+        }
+    },
+    {
+        "item": {
+            "category": "monankem",
+            "image": "http://api.popeyes.vn/api/v1/files/Passionfruitsalad.jpg",
+            "id": 3793,
+            "name": "Salad Sốt Chanh Dây",
+            "price": 19000,
+            "description": "Salad Chanh Dây"
+        }
+    },
+    {
+        "item": {
+            "category": "ga-tam-nuocmam",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_040934_1pcGTNM.jpg",
+            "id": 3113,
+            "name": "1 Miếng Gà Tắm Nước Mắm",
+            "price": 45000,
+            "description": "1 Miếng Gà Tắm Nước Mắm"
+        }
+    }
+]

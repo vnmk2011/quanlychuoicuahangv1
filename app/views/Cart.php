@@ -17,7 +17,7 @@
         </div>
         <div class="price-count">
           <div class="price-item">
-            <span id="price-product-<?php echo $key;?>">Đơn giá: <?php echo  number_format($value["price"] * $value["quantity"]);?>đ</span>
+            <span id="price-product-<?php echo $key;?>">Đơn giá: <?php echo  number_format((int)$value["price"] * (int)$value["quantity"]);?>đ</span>
           </div>
           <div class="count-item">
             <div class="count">  
@@ -85,7 +85,7 @@
                 <p id="total-product-price">
                 <?php
                   $total = array_reduce($_SESSION["cart"], function($carry, $item){
-                      return $carry + $item['price'] * $item['quantity'];
+                      return $carry + (int)$item['price'] * $item['quantity'];
                   }, 0);
                   $_SESSION['totalPrice'] = $total;
                   echo number_format($total) . 'đ';

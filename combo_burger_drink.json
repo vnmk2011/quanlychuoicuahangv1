@@ -1,0 +1,242 @@
+[
+    {
+        "item": {
+            "category": "burger",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_073759_BurgerG.jpg",
+            "id": 3130,
+            "name": "Burger Gà",
+            "price": 56000,
+            "description": "Burger Gà"
+        }
+    },
+    {
+        "item": {
+            "category": "burger",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_073823_BurgerC.jpg",
+            "id": 3137,
+            "name": "Burger Cá",
+            "price": 54000,
+            "description": "Burger Cá"
+        }
+    },
+    {
+        "item": {
+            "category": "burger",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_074929_BurgerTm.jpg",
+            "id": 3396,
+            "name": "Burger Tôm",
+            "price": 46000,
+            "description": "Burger Tôm"
+        }
+    },
+    {
+        "item": {
+            "category": "burger",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_093821_burgergCoke.png",
+            "id": 3363,
+            "name": "Combo burger Gà",
+            "price": 69000,
+            "description": "1 Burger Gà Cajun + 1 Thức Uống "
+        }
+    },
+    {
+        "item": {
+            "category": "burger",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_152239_burgercCoke.png",
+            "id": 3364,
+            "name": "Combo Burger Cá",
+            "price": 64000,
+            "description": "1 Burger Cá  + 1 Thức Uống "
+        }
+    },
+    {
+        "item": {
+            "category": "burger",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_153509_burgertmCoke.png",
+            "id": 3365,
+            "name": "Combo Burger Tôm",
+            "price": 59000,
+            "description": "1 Bơ Gơ Tôm + 1 Thức Uống "
+        }
+    },
+    {
+        "item": {
+            "category": "burger",
+            "image": "http://api.popeyes.vn/api/v1/files/ComboPopBurgerA.jpg",
+            "id": 3518,
+            "name": "Pop Burger A",
+            "price": 89000,
+            "description": "1 Pop Burger + 1 Gà giòn + 1 Thức uống"
+        }
+    },
+    {
+        "item": {
+            "category": "burger",
+            "image": "http://api.popeyes.vn/api/v1/files/ComboPopBurgerB.jpg",
+            "id": 3519,
+            "name": "Combo Pop Burger B",
+            "price": 99000,
+            "description": "1 Pop Burger + 1 gà giòn + 1 khoai tây nghiền + 1 nước ngọt (Phần gà được phục vụ ngẫu nhiên)"
+        }
+    },
+    {
+        "item": {
+            "category": "combo-khuyen-maii",
+            "image": "http://api.popeyes.vn/api/v1/files/ComboFamilyA.jpg",
+            "id": 3901,
+            "name": "Combo gia đình A",
+            "price": 281000,
+            "description": "Family A"
+        }
+    },
+    {
+        "item": {
+            "category": "combo-khuyen-maii",
+            "image": "http://api.popeyes.vn/api/v1/files/ComboFamilyB.jpg",
+            "id": 3895,
+            "name": "Combo gia đình B",
+            "price": 369000,
+            "description": "Family B"
+        }
+    },
+    {
+        "item": {
+            "category": "combo-khuyen-maii",
+            "image": "http://api.popeyes.vn/api/v1/files/ComboFamilyC.jpg",
+            "id": 3896,
+            "name": "Combo gia đình C",
+            "price": 379000,
+            "description": "Family C"
+        }
+    },
+    {
+        "item": {
+            "category": "combo-khuyen-maii",
+            "image": "http://api.popeyes.vn/api/v1/files/combokid1.jpg",
+            "id": 3729,
+            "name": "Combo Kid Meal 1A",
+            "price": 49000,
+            "description": "1 Pop Burger + Milo 115ml"
+        }
+    },
+    {
+        "item": {
+            "category": "combo-khuyen-maii",
+            "image": "http://api.popeyes.vn/api/v1/files/10102022_100115_hinhcombokid2.jpg",
+            "id": 3505,
+            "name": "Kid Combo 2",
+            "price": 55000,
+            "description": "1 Popcorn rong biển/Số Phô mai/Sốt BBQ + 1 Khoai Tây Chiên (R) + 1 Milo"
+        }
+    },
+    {
+        "item": {
+            "category": "combo-khuyen-maii",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_071610_Kidcombo01.jpg",
+            "id": 3162,
+            "name": "Kid Combo 1",
+            "price": 49000,
+            "description": "1 Burger Tôm + 1 Milo"
+        }
+    },
+    {
+        "item": {
+            "category": "combo-khuyen-maii",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_071515_kidcombo02.jpg",
+            "id": 3164,
+            "name": "Kid Combo 2",
+            "price": 49000,
+            "description": "2 Gà Không Xương + 2 Snack cá + 1 Milo"
+        }
+    },
+    {
+        "item": {
+            "category": "combo-khuyen-maii",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_071443_kidcombo03.jpg",
+            "id": 3165,
+            "name": "Kid Combo 3",
+            "price": 55000,
+            "description": "1 Gà Giòn + 1 Milo + 1 Khoai Tây Chiên (Vừa) (Phần gà được phục vụ ngẫu nhiên)"
+        }
+    },
+    {
+        "item": {
+            "category": "combo-khuyen-maii",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_072230_Kidcombo04.jpeg",
+            "id": 3225,
+            "name": "Kid Combo 4",
+            "price": 65000,
+            "description": "1 Mì Ý + 1 Milo + 1 Gà Không Xương"
+        }
+    },
+    {
+        "item": {
+            "category": "combo-khuyen-maii",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_071550_Kidcombo01.jpg",
+            "id": 3163,
+            "name": "Kid Combo 1",
+            "price": 49000,
+            "description": "1 Burger Tôm + 1 Milo"
+        }
+    },
+    {
+        "item": {
+            "category": "thuc--uong",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_071609_LyMilo.jpg",
+            "id": 3408,
+            "name": "Milo",
+            "price": 27000,
+            "description": "Milo"
+        }
+    },
+    {
+        "item": {
+            "category": "thuc--uong",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_071658_dasani.jpg",
+            "id": 3409,
+            "name": "Dasani",
+            "price": 25000,
+            "description": "Dasani"
+        }
+    },
+    {
+        "item": {
+            "category": "thuc--uong",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_080645_coca.png",
+            "id": 3436,
+            "name": "Coca Cola",
+            "price": 25000,
+            "description": "Coca TA"
+        }
+    },
+    {
+        "item": {
+            "category": "thuc--uong",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_064309_Sprite.jpg",
+            "id": 3437,
+            "name": "Sprite",
+            "price": 25000,
+            "description": "Sprite TA"
+        }
+    },
+    {
+        "item": {
+            "category": "thuc--uong",
+            "image": "http://api.popeyes.vn/api/v1/files/08072022_065051_Fanta.jpg",
+            "id": 3438,
+            "name": "Fanta",
+            "price": 25000,
+            "description": "Fanta TA"
+        }
+    },
+    {
+        "item": {
+            "category": "thuc--uong",
+            "image": "http://api.popeyes.vn/api/v1/files/06012023_081437_viber_image_20230106_151242830.jpg",
+            "id": 3473,
+            "name": "Coke Zero",
+            "price": 25000,
+            "description": "Coke Zero"
+        }
+    }
+]
