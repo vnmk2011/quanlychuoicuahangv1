@@ -39,19 +39,23 @@ class Menu extends baseController{
                 $msg["msg"] = "Decrease quantity success";
                 $msg["quantity"] = $_SESSION["cart"][$id]["quantity"];
                 $msg["totalPrice"] = $this->totalPrice();
+                $_SESSION['totalPrice'] = $msg["totalPrice"];
                 ob_clean();
                 header('Content-Type: application/json');
                 echo json_encode($msg);
             }elseif(array_key_exists($id, $_SESSION["cart"])){
+                // Khi sản phẩm đã có trong giỏ hàng
                 $_SESSION["cart"][$id]["quantity"] += 1;
                 $msg["quantity"] = $_SESSION["cart"][$id]["quantity"];
                 $msg["total"] = count($_SESSION["cart"]);
                 $msg["msg"] = "Increase quantity success";
                 $msg["totalPrice"] = $this->totalPrice();
+                $_SESSION['totalPrice'] = $msg["totalPrice"];
                 ob_clean();
                 header('Content-Type: application/json');
                 echo json_encode($msg);
             }else{
+                // khi chưa có đơn hàng nào trong giỏ hàng
                 $name = $_POST["name"];
                 $price = $_POST["price"];
                 $image = $_POST["image"];

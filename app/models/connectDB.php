@@ -1,4 +1,5 @@
 <?php
+
 class connectDB
 {
     private $host = DB_HOST;

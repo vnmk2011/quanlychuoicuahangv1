@@ -12,7 +12,7 @@ function increaseValue(e){
         if (req.readyState === XMLHttpRequest.DONE && req.status === 200) {
             priceElement.innerHTML = "Đơn giá: " + parsePrice(String(currentValue.value * price)) + "đ";
             
-        } 
+        }  
     }
     req.send("id=" + productId);
 }

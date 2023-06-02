@@ -1,4 +1,8 @@
  function addCart(e) {
+    if (document.getElementById('logout') == null){
+        window.location.href = "/login";
+        return;
+    }
     let id = e.getAttribute("data-id");
     let name = e.getAttribute("data-name");
     let price = e.getAttribute("data-price");

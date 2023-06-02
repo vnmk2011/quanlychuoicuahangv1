@@ -32,6 +32,9 @@ body {
     font-family: 'SF Pro Display', sans-serif;
     
 }
+main{
+  background-color: #F9F5F6;
+}
 .main-menu{
     min-height: 756px;
     padding: 20px 38px;

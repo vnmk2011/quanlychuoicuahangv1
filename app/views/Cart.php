@@ -37,7 +37,7 @@
     </div>
     <div class="create-order">
       <div class="container-form">
-        <form action="order.php" method="post">
+        <form action="" method="post">
           <div class="info-order">
             <div class="name-order">
               <div class="label-info-order label-name">
@@ -77,7 +77,7 @@
             </div>
           </div>
           <div class="info-price">
-            <div class="price-total">
+            <div class="price-total"> 
               <div class="label-price">
                 <h5>Tổng tiền:</h5>
               </div>
@@ -122,4 +122,3 @@
     </div>
   </div>
 </section>
-<?php var_dump($_SESSION["cart"]); ?>
