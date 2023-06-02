@@ -10,7 +10,8 @@ class Login extends baseController{
             echo '<script>alert("Bạn đã đăng nhập"); location.href="/";</script>';
 
         }else{
-            $this->render('login');
+            # $this->view('login');
+            require_once __DIR__ . "/../views/Login.php";
             if(isset($_POST['username']) && isset($_POST['password'])){
                 $userName = $_POST['username'];
                 $password = $_POST['password'];

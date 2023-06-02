@@ -6,7 +6,10 @@ class Menu extends baseController{
         $this->model = $this->loadModel('menuModel');
     }
     public function index(){
-       $this->render('menu/products', $this->model->getAll());
+       # $this->view('menu/products', $this->model->getAll());
+       $data =[];
+        $data[0] = $this->model->getAll();
+       require_once __DIR__ . "/../views/menu/products.php";
     }
     public function page($currentPage = 1){
         $totalPage = ceil((int)$this->model->productNumber()->fetch_assoc()["COUNT(*)"] / LIMIT_PAGE);
@@ -15,16 +18,28 @@ class Menu extends baseController{
         $start = ($currentPage - 1) * LIMIT_PAGE;
         $previousPage = $currentPage > 1 ? $currentPage - 1 : 1;
         $nextPage = $currentPage < $totalPage ? $currentPage + 1 : $totalPage;
-        $this->render('menu/products', $this->getProducts($start) , $previousPage, $nextPage, $currentPage, $totalPage, $this->model->getCategory());
+        // $this->view('menu/products', $this->getProducts($start) , $previousPage, $nextPage, $currentPage, $totalPage, $this->model->getCategory());
+        $data = [];
+        $data[0] = $this->getProducts($start);
+        $data[1] = $previousPage;
+        $data[2] = $nextPage;
+        $data[3] = $currentPage;
+        $data[4] = $totalPage;
+        $data[5] = $this->model->getCategory();
+        require_once __DIR__ . "/../views/Menu/products.php";
         
     }
     public function details($id){
-        $this->render('menu/details', $this->model->getProduct($id));
+        $this->view('menu/details', $this->model->getProduct($id));
     }
     public function category($id){
-        $this->render('menu/category', $this->model->getProductByCategory($id), $this->model->getCategory());
+        // $this->view('menu/category', $this->model->getProductByCategory($id), $this->model->getCategory());
+        $data = [];
+        $data[0] = $this->model->getProductByCategory($id);
+        $data[1] = $this->model->getCategory();
+        require_once __DIR__ . "/../views/Menu/category.php";
     }
-    private function getProducts($start){
+    public function getProducts($start){
         $result = $this->model->getProducts($start, LIMIT_PAGE);
         return $result;
     }
@@ -75,7 +90,7 @@ class Menu extends baseController{
             
         } 
     }
-    private function totalPrice()
+    public function totalPrice()
     {
         $total = array_reduce($_SESSION["cart"], function ($prev, $current) {
             return $prev + $current['price'] * $current['quantity'];

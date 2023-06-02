@@ -1,7 +1,7 @@
 <?php
 class Home extends baseController{
     public function index(){
-        $this->render("home");
+        require_once __DIR__ . "/../views/Home.php";
     }
     
 }
