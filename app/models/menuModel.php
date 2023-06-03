@@ -35,5 +35,10 @@ class menuModel extends connectDB{
         $result = $this->connect->query($sql);
         return $result;
     }
+    public function search($str){
+        $sql = "SELECT * FROM product WHERE name LIKE '%$str%'";
+        $result = $this->connect->query($sql);
+        return $result;
+    }
 }
 ?>

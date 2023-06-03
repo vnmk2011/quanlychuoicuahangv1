@@ -1,6 +1,6 @@
 function addCart(e) {
     if (document.getElementById('logout') == null){
-        window.location.href = "/login";
+        window.location.href = "/Login";
         return;
     }
     let id = e.getAttribute("data-id");
