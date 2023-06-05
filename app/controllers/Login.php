@@ -13,8 +13,8 @@ class Login extends baseController{
             # $this->view('login');
             require_once __DIR__ . "/../views/Login.php";
             if(isset($_POST['username']) && isset($_POST['password'])){
-                $userName = $_POST['username'];
-                $password = $_POST['password'];
+                $userName = htmlspecialchars($_POST['username']);
+                $password = htmlspecialchars($_POST['password']);
                 $this->checkLogin($userName, $password);
             }
         }

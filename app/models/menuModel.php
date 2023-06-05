@@ -1,5 +1,4 @@
 <?php
-
 class menuModel extends connectDB{
     private $connect;
     public function __construct(){

@@ -19,8 +19,8 @@ class Cart extends baseController
     }
     public function delete()
     {
-        if (isset($_POST["id"])) {
-            $id = $_POST["id"];
+        if (isset ($_POST["id"])) {
+            $id = htmlspecialchars($_POST["id"]);
             unset($_SESSION["cart"][$id]);
         }
         ob_clean();
@@ -33,7 +33,7 @@ class Cart extends baseController
             $userId = (int)$_SESSION["user"]["id"];
             $totalPrice = $_SESSION['totalPrice'];
             $status = "shipping";
-            $branchId = $_POST['branch'];
+            $branchId = htmlspecialchars($_POST['branch']);
             $address = $_SESSION["user"]["address"];
             $idOrder = $this->model->post("order", $userId, $status, $timeCreate, $totalPrice, $branchId, $address);
             // thêm vào bảng detail_order

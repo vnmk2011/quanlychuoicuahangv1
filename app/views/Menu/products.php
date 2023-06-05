@@ -1,10 +1,39 @@
 <div class="alert-popup"></div>
-
+<div id="container-search">
+      <div id="close" onclick="closeSearch()"><a>x</a></div>
+      <div class="form-search">
+        <form>
+          <div class="input-result">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              onkeyup='searchItem(this.value)'
+            >
+            <div id="result">
+              <div class="container-search-item">
+                <ul id="list-item-search">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+</div>
 <section class="products">
       <div class="main-menu">
         <div class="container-menu">
           <div class="container-category">
             <div class="category-list">
+              <div class="item-category">
+                <a id="category-search-item" onclick="openSearch()"
+                  ><span class="img-category" style="background-color: #FFF2F2;"
+                    ><img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/768px-Search_Icon.svg.png"
+                      alt="" /></span
+                  ><span class="name-category">Tìm kiếm</span></a
+                >
+              </div>
               <div class="item-category">
                 <a href="/Menu/page"
                   ><span class="img-category"
@@ -14,7 +43,8 @@
                   ><span class="name-category">Tất cả</span></a
                 >
               </div>
-              <?php while($row = $data[5]->fetch_assoc()){?>
+              <?php if(isset($data[5])){
+               while($row = $data[5]->fetch_assoc()){?>
                 <div class="item-category">
                 <a href="<?php echo "/Menu/category/". $row['id'] ;?>"
                   ><span class="img-category"
@@ -26,7 +56,7 @@
                 >
               </div>
               <?php } ?>
-
+              <?php } else{echo '<script>location.href="/Menu/page"</script>';} ?>
             </div>
           </div>
           <div class="container-product">
