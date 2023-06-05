@@ -4,3 +4,4 @@
 let namea = "Nguyễn Văn sA";
 let checkName = /^A-Za-z]*$/;
 console.log(checkName.test(namea));
+console.log(checkName.test(namea));
