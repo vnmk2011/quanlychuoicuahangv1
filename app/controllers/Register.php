@@ -17,7 +17,7 @@ class Register extends baseController{
     private function checkRegister(){
        $register = $this->model->post(htmlspecialchars($_POST['username']), htmlspecialchars($_POST['password']), htmlspecialchars($_POST['email']), htmlspecialchars($_POST['address']), htmlspecialchars($_POST['phone']), htmlspecialchars($_POST['name']), $_POST['gender']);
          if($register){
-              echo "<script>alert('Đăng ký thành công')</script>";
+              echo "<script>alert('Đăng ký thành công'); location.href='/Login';</script>";
          }else{
               echo "<script>alert('Đăng ký thất bại trùng tên đăng nhập')</script>";
          }

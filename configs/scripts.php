@@ -4,7 +4,8 @@ $jsFiles = [
     "/public/js/addCart.js",
     "/public/js/order.js",
     "/public/js/cart.js",
-    "/public/js/search.js"
+    "/public/js/search.js",
+    "/public/js/validate.js"
 ];
 
 ?>
